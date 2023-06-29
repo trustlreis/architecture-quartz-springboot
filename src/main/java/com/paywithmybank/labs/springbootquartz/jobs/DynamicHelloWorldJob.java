@@ -11,8 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
-@QuartzJob(name = "HelloWorld", cronExpression = "0/5 * * * * ?")
-public class HelloWorldJob implements Job {
+@QuartzJob(cronExpression = "${jobs.dynamic-hello-world.cron}")
+public class DynamicHelloWorldJob implements Job {
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) {

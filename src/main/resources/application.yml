@@ -1,3 +1,7 @@
 spring:
   quartz:
     job-store-type: memory
+
+jobs:
+  dynamic-hello-world:
+    cron: 0/5 * * * * ?
